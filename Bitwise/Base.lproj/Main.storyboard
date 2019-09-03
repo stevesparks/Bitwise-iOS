@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="80A-H1-9EC">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Pec-hp-J1k">
+            <objects>
+                <navigationController hidesBarsWhenKeyboardAppears="YES" id="80A-H1-9EC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9XD-M2-fw1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rmg-Em-bcl">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="VSR-L3-jET" kind="relationship" relationship="rootViewController" id="MXA-jH-HC9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="caJ-Ku-D4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="120"/>
+        </scene>
+        <!--8-bit Binary Numbers-->
+        <scene sceneID="VJc-Eb-Qfy">
+            <objects>
+                <tableViewController title="8-bit Binary Numbers" id="VSR-L3-jET" customClass="MyTableViewController" customModule="Bitwise" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" id="dNU-I2-AhG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="byte" rowHeight="40" id="Ofa-TE-XCp" customClass="ByteCell" customModule="Bitwise" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="1" width="414" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ofa-TE-XCp" id="Wsb-01-Eq2">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="39.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eac-co-QL7" customClass="ByteView" customModule="Bitwise" customModuleProvider="target">
+                                            <rect key="frame" x="80" y="1" width="334" height="37.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="334" id="T1h-hp-Nul"/>
+                                            </constraints>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVH-Oe-CK7">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="39.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="eac-co-QL7" firstAttribute="top" secondItem="Wsb-01-Eq2" secondAttribute="top" constant="1" id="7ZY-2Q-jNo"/>
+                                        <constraint firstAttribute="trailing" secondItem="eac-co-QL7" secondAttribute="trailing" id="TUW-35-Z7K"/>
+                                        <constraint firstItem="eac-co-QL7" firstAttribute="leading" secondItem="QVH-Oe-CK7" secondAttribute="trailing" id="c68-IX-bKk"/>
+                                        <constraint firstAttribute="bottom" secondItem="eac-co-QL7" secondAttribute="bottom" constant="1" id="htd-2O-Vgb"/>
+                                        <constraint firstAttribute="bottom" secondItem="QVH-Oe-CK7" secondAttribute="bottom" id="jTR-O8-2Xn"/>
+                                        <constraint firstItem="QVH-Oe-CK7" firstAttribute="leading" secondItem="Wsb-01-Eq2" secondAttribute="leading" id="mbq-N7-WBa"/>
+                                        <constraint firstItem="QVH-Oe-CK7" firstAttribute="top" secondItem="Wsb-01-Eq2" secondAttribute="top" id="zgJ-Cn-3QJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="byteView" destination="eac-co-QL7" id="itM-L6-CPg"/>
+                                    <outlet property="valueLabel" destination="QVH-Oe-CK7" id="JXO-ws-6m2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VSR-L3-jET" id="mWf-b2-JV9"/>
+                            <outlet property="delegate" destination="VSR-L3-jET" id="pVh-zD-25g"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="8-Bit Binary Numbers" id="Wg6-E1-cTe"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVI-LR-pMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="110"/>
+        </scene>
+    </scenes>
+</document>
